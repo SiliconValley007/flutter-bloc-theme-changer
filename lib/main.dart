@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return BlocProvider<ThemeCubit>(
       create: (_) => ThemeCubit(),
       child: BlocBuilder<ThemeCubit, ThemeState>(
         buildWhen: (previous, current) => previous.themeMode != current.themeMode,
